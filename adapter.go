@@ -52,11 +52,11 @@ func NewAdapter(arg interface{}, dbname ...string) (*Adapter, error) {
 	var db *pg.DB
 	var err error
 
-	if len(dbname) > 0 {
-		db, err = createCasbinDatabase(arg, dbname[0])
-	} else {
-		db, err = createCasbinDatabase(arg, DefaultDatabaseName)
-	}
+	//if len(dbname) > 0 {
+	//	db, err = createCasbinDatabase(arg, dbname[0])
+	//} else {
+	//	db, err = createCasbinDatabase(arg, DefaultDatabaseName)
+	//}
 
 	if err != nil {
 		return nil, fmt.Errorf("pgadapter.NewAdapter: %v", err)
